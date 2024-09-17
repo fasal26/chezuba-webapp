@@ -46,8 +46,8 @@ export const CartModal = () => {
   }
 
   return (
-    <div className={styles['cz-cart-modal']}>
-      <div className={styles['cz-cart-modal-body']}>
+    <div className={styles['cz-cart-modal']} onClick={() => toggleCart(false)}>
+      <div className={styles['cz-cart-modal-body']} onClick={(e) => e.stopPropagation()}>
         <div className={styles['cz-cart-header']}>
           <h4>Your Bag</h4>
           <p className="pointer" onClick={() => toggleCart(false)}>Close</p>

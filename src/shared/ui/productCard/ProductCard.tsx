@@ -18,7 +18,7 @@ export const ProductCard = ({ menu,onAddCart }: MenuType) => {
         <h4>{menu.MENU_NAME} ( {menu?.SIZE} )</h4>
         <p>{menu.DESCRIPTION}</p>
         <strong>₹{menu.PRICE}</strong>
-        <button onClick={() => onAddCart(menu)}>Add to cart</button>
+        <button onClick={() => onAddCart(menu)} className='pointer'>Add to cart</button>
       </div>
     </li>
   )

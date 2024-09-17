@@ -8,7 +8,7 @@ export const Header = () => {
     <header className={styles['cz-header']}>
       <div className={styles['cz-header-container']}>
         <div>Chezuba Pizaa's</div>
-        <div onClick={() => toggleCart(true)}>Cart</div>
+        <div onClick={() => toggleCart(true)} className='pointer'>Cart</div>
       </div>
     </header>
   )
