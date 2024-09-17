@@ -1,5 +1,6 @@
 import { IMenuItem } from '@store/order/IOrderStore'
 import styles from './productCard.module.css'
+import noImg from '@shared/assets/no-image-icon-23485.png';
 
 type MenuType = {
   menu: IMenuItem,
@@ -11,7 +12,7 @@ export const ProductCard = ({ menu,onAddCart }: MenuType) => {
     <li>
       <div className={styles['prdimg-container']}>
         <figure>
-          <img src={menu?.IMAGE}></img>
+          <img src={menu?.IMAGE || noImg}></img>
         </figure>
       </div>
       <div className={styles['prd-price']}>
