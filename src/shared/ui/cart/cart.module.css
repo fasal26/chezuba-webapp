@@ -1,0 +1,38 @@
+.cz-cart-items-container{
+  display: flex;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.cz-cart-img-container{
+  background-color: #f5f5f5;
+  padding: 25px;
+  flex-basis: 25%;
+}
+
+.cz-cart-img-container > figure{
+  height: 120px;
+}
+
+.cz-cart-img-container > figure > img{
+  height: 100%;
+  width: 100%;
+}
+
+.cz-cart-details{
+  flex-basis: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cz-cart-details > p{
+  color: var(--cz-primary);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.cz-cart-price{
+  display: flex;
+  justify-content: space-between;
+}

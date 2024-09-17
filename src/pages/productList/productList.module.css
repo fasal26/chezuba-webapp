@@ -1,0 +1,39 @@
+.cz-prdlist-container{
+  margin: 80px 0;
+}
+
+.cz-prdlist{
+  padding: 2rem 14rem;
+}
+
+.cz-prdlist > ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 92px;
+  list-style: none;
+}
+
+/* .cz-prdlist ul > li{
+  width: 20%;
+}
+
+.prdimg-container{
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+
+.prdimg-container > figure{
+  height: 300px;
+}
+
+.prdimg-container > figure > img{
+  height: 100%;
+  width: 100%;
+}
+
+.prd-price{
+  flex-direction: column;
+  display: flex;
+  padding-top: 20px;
+  gap: 10px;
+} */

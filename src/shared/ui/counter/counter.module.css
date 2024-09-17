@@ -1,0 +1,20 @@
+.cz-counter{
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+
+.cz-counter-button {
+  border: 1px solid var(--cz-dark);
+  padding: 3px;
+  border-radius: 2px;
+  background: white;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.cz-counter-button > span {
+  font-size: 20px;
+}

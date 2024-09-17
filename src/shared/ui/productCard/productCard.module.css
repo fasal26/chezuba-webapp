@@ -1,0 +1,32 @@
+li{
+  width: 20%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prdimg-container{
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+
+.prdimg-container > figure{
+  height: 300px;
+}
+
+.prdimg-container > figure > img{
+  height: 100%;
+  width: 100%;
+}
+
+.prd-price{
+  flex-direction: column;
+  display: flex;
+  padding-top: 20px;
+  gap: 10px;
+}
+
+.prd-price > h4{
+  color: var(--cz-primary);
+  font-weight: 500;
+}

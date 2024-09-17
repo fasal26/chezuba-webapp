@@ -1,0 +1,23 @@
+.cz-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  box-shadow: 0 0 10px #999;
+}
+
+.cz-header-container{
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: var(--cz-border-solid) var(--cz-dark-100);
+  position: unset;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 14rem;
+  align-items: center;
+}
