@@ -2,6 +2,7 @@ import { Counter } from "@shared/ui/counter"
 import styles from "./cart.module.css"
 import { useOrderStore } from "@store/order/orderStore"
 import { Cart } from "@shared/ui/cart"
+import { IMenuItem } from "@store/order/IOrderStore"
 
 export const CartModal = () => {
   const toggleCart = useOrderStore(state => state.toggleCart)
@@ -10,25 +11,22 @@ export const CartModal = () => {
   const createOrderAction = useOrderStore(state => state.createOrderAction)
   const clearCartAction = useOrderStore(state => state.clearCartAction)
 
-  console.log(cartItems,'cartItems')
-
-  const totalPrice = cartItems?.reduce((acc: number,obj: any) => {
+  const totalPrice = cartItems?.reduce((acc: number,obj) => {
     return acc + obj.PRICE
   }, 0)
 
-  const handleAddCount = (cart: any) => {
-    console.log('add')
+  const handleAddCount = (cart: IMenuItem) => {
     updateCartQuanity(cart,'+')
   }
 
-  const handleReduceCount = (cart: any) => {
+  const handleReduceCount = (cart: IMenuItem) => {
     updateCartQuanity(cart,'-')
   }
 
   const createOrder = async () => {
     try {
       const payload = {
-        ITEMS: cartItems?.map((c: any) => {
+        ITEMS: cartItems?.map((c) => {
           const { MENU_ID,QUANTITY } = c
           return {
             MENU_ID,
@@ -54,7 +52,7 @@ export const CartModal = () => {
           <h4>Your Bag</h4>
           <p className="pointer" onClick={() => toggleCart(false)}>Close</p>
         </div>
-        { cartItems?.map((cart: any) => (
+        { cartItems?.map((cart) => (
           <Cart key={cart.MENU_ID} cartItem={cart}>
             <Counter onAddCount={() => handleAddCount(cart)} onReduceCount={() => handleReduceCount(cart)}>{cart?.QUANTITY}</Counter>
           </Cart>
