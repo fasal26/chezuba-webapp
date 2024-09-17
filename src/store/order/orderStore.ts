@@ -25,7 +25,7 @@ export const useOrderStore = create<IMenuStoreState>()(
       },
       updateToCart: (menu) => {
         const cart = [...get().cart]
-        const index = cart?.findIndex((c: any) => c.MENU_ID == menu.MENU_ID)
+        const index = cart?.findIndex((c) => c.MENU_ID == menu.MENU_ID)
         if(index != -1){
           cart[index].QUANTITY++
         }else{
@@ -37,7 +37,7 @@ export const useOrderStore = create<IMenuStoreState>()(
         set({ cart })
       },
       updateCartQuanity: (menu,sign) => {
-        const cart = [...get().cart]?.map((c: any,) => {
+        const cart = [...get().cart]?.map((c) => {
           if(c.MENU_ID == menu.MENU_ID){
             if(sign == '+') c.QUANTITY++
             else {

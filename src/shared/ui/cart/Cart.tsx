@@ -1,11 +1,17 @@
+import { IMenuItem } from "@store/order/IOrderStore"
 import styles from "./cart.module.css"
 
-export const Cart = ({ cartItem,children }: any) => {
+type CartType = {
+  cartItem: IMenuItem
+  children: React.ReactNode
+}
+
+export const Cart = ({ cartItem,children }: CartType) => {
   return (
     <div className={styles['cz-cart-items-container']}>
       <div className={styles['cz-cart-img-container']}>
         <figure>
-          <img src="https://img.curlified.com/gallery/4881306e82631d1d51e8677e8de35b13.png?w=300"></img>
+          <img src={cartItem?.IMAGE}></img>
         </figure>
       </div>
       <div className={styles['cz-cart-details']}>

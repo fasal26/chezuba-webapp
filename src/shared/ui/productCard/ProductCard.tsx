@@ -1,8 +1,9 @@
+import { IMenuItem } from '@store/order/IOrderStore'
 import styles from './productCard.module.css'
 
 type MenuType = {
-  menu: any,
-  onAddCart: (menu: any) => void
+  menu: IMenuItem,
+  onAddCart: (menu: IMenuItem) => void
 }
 
 export const ProductCard = ({ menu,onAddCart }: MenuType) => {
